@@ -24,3 +24,5 @@ quasar build
 
 ### Customize the configuration
 See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+
+### Assuming you have CouchDB up and running on 0.0.0.0:5984

@@ -40,6 +40,7 @@ module.exports = {
     'generator-star-spacing': 'off',
     // allow paren-less arrow functions
     'arrow-parens': 'off',
+    'prefer-const': 'off',
     'one-var': 'off',
 
     'import/first': 'off',

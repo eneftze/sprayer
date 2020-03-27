@@ -1,5 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import state from './state'
+import * as getters from './getters'
+import * as mutations from './mutations'
+import * as actions from './actions'
 
 // import example from './module-example'
 
@@ -13,17 +17,19 @@ Vue.use(Vuex)
  * async/await or return a Promise which resolves
  * with the Store instance.
  */
-
+let store = null
 export default function (/* { ssrContext } */) {
   const Store = new Vuex.Store({
-    modules: {
-      // example
-    },
-
-    // enable strict mode (adds overhead!)
-    // for dev mode only
+    namespaced: true,
+    getters,
+    mutations,
+    actions,
+    state,
     strict: process.env.DEV
   })
 
+  store = Store
   return Store
 }
+
+export { store }

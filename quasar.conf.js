@@ -1,6 +1,6 @@
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
-
+const path = require('path')
 module.exports = function (ctx) {
   return {
     // app boot file (/src/boot)
@@ -8,7 +8,8 @@ module.exports = function (ctx) {
     // https://quasar.dev/quasar-cli/cli-documentation/boot-files
     boot: [
       'i18n',
-      'axios'
+      'axios',
+      'pouchdb/index'
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
@@ -69,6 +70,7 @@ module.exports = function (ctx) {
 
       // https://quasar.dev/quasar-cli/cli-documentation/handling-webpack
       extendWebpack (cfg) {
+        cfg.resolve.alias['pouchdb-promise'] = path.join(__dirname, '/node_modules/pouchdb-promise/lib/index.js')
         cfg.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
