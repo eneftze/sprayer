@@ -1,4 +1,4 @@
-# spray wall help (sp)
+# spray guide (sp)
 
 app for climbing on spray walls
 

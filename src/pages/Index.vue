@@ -1,42 +1,23 @@
 <template>
-  <q-page class="col-12">
-    <h3 class="text-center">
-      Locate
-    </h3>
-    <h3 class="text-center">Login/Register</h3>
-    <q-btn
-      rounded
-      color="primary"
-      size="lg"
-      label="Ulala"
-      @click="onClick"
-    />
-  </q-page>
+  <router-link
+    to="/locate">
+    <q-page class="relative-position">
+      <div class="logo-landing absolute-center">
+        <q-img src="~assets/logo.svg" class="logo-landing"/>
+        <h4 class="text-center q-mt-none">
+          Spray Guide
+        </h4>
+      </div>
+    </q-page>
+  </router-link>
 </template>
 
 <script>
 
-function onClick () {
-  let db = this.$db
-  let proba = {
-    _id: 'proba',
-    proba: {
-      proba: 'proba'
-    }
-  }
-
-  db.local.get(proba._id).then(function (e) {
-    db.local.put(e).then(function (e1) {
-    })
-  }).catch(function (err) {
-    console.log('ERROR', err)
-  })
-}
-
 export default {
   name: 'PageIndex',
-  methods: {
-    onClick
+  data () {
+    return {}
   }
 }
 </script>

@@ -1,7 +1,9 @@
-// This is just an example,
-// so you can safely delete all default props below
-
 export default {
-  failed: 'Action failed',
-  success: 'Action was successful'
+  select_wall: 'Select wall',
+  route_holds: 'Holds',
+  routes: 'Routes',
+  add_route: 'add route',
+  route_holds_c: 'draw on images',
+  route_info: 'Info',
+  route_info_c: 'name, grade etc.'
 }

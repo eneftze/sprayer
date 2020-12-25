@@ -1,4 +1,4 @@
-import { db } from '../boot/pouchdb/index'
+import { db } from '../../boot/pouchdb/index'
 export function act (/* context */) {
   console.log(db)
   return 'llllll'

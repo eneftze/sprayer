@@ -1,23 +1,23 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <q-header ref="header" elevated>
       <q-toolbar>
-        <q-btn
+        <!--<q-btn
           flat
           dense
           round
           icon="menu"
           aria-label="Menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
-        />
+        />-->
 
         <q-toolbar-title>
-          Spray wall helper
+          Spray guide
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
 
-    <q-drawer
+    <!--<q-drawer
       v-model="leftDrawerOpen"
       bordered
       show-if-above
@@ -35,7 +35,7 @@
           v-bind="link"
         />
       </q-list>
-    </q-drawer>
+    </q-drawer>-->
 
     <q-page-container>
       <router-view />
@@ -44,14 +44,14 @@
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink'
+// import EssentialLink from 'components/EssentialLink'
 
 export default {
   name: 'MainLayout',
 
-  components: {
+  /* components: {
     EssentialLink
-  },
+  }, */
 
   data () {
     return {

@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import state from './state'
-import * as getters from './getters'
-import * as mutations from './mutations'
-import * as actions from './actions'
+// import ui from './ui/index'
+import routes from './routes/index'
+import gyms from './gyms/index'
+import walls from './walls/index'
+import createPersistedState from 'vuex-persistedstate'
 
 // import example from './module-example'
 
@@ -21,10 +22,15 @@ let store = null
 export default function (/* { ssrContext } */) {
   const Store = new Vuex.Store({
     namespaced: true,
-    getters,
-    mutations,
-    actions,
-    state,
+    modules: {
+      // ui: ui,
+      routes: routes,
+      gyms: gyms,
+      walls: walls
+    },
+    plugins: [
+      createPersistedState()
+    ],
     strict: process.env.DEV
   })
 

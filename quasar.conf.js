@@ -49,7 +49,9 @@ module.exports = function (ctx) {
       directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: [
+        'Dialog'
+      ]
     },
 
     // https://quasar.dev/quasar-cli/cli-documentation/supporting-ie
@@ -95,17 +97,17 @@ module.exports = function (ctx) {
     animations: [],
 
     // https://quasar.dev/quasar-cli/developing-ssr/configuring-ssr
-    ssr: {
-      pwa: false
-    },
+    // ssr: {
+      // pwa: false
+    // },
 
     // https://quasar.dev/quasar-cli/developing-pwa/configuring-pwa
     pwa: {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: 'spray wall help',
-        short_name: 'spray wall help',
+        name: 'spray guide',
+        short_name: 'spray guide',
         description: 'app for climbing on spray walls',
         display: 'standalone',
         orientation: 'portrait',
